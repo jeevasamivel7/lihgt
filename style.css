@@ -1,0 +1,45 @@
+
+*
+{
+  margin-right: 0%;
+  padding: 0px;
+}
+
+
+.dropbtn{
+  margin-right: 50%;
+  overflow: visible;
+  background-color: transparent;
+  position: -webkit-sticky;
+  top: 0%;
+  justify-content: center;
+  width:100%;
+}
+.dropbtn ul{
+  list-style: none;
+  background-color: transparent;
+  border: 3px;
+  text-align: center;
+
+text-decoration: none;
+
+}
+
+/* Links inside the dropbtn */
+.dropbtn ul li {
+  float: left;
+  font-size: 20px;
+  text-align: left;
+  border: 5px;
+  width: 180px;
+  text-decoration: none;
+  position: relative;
+
+}
+
+
+
+
+
+
+
