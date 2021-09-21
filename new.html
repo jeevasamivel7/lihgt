@@ -10,11 +10,18 @@
 position: sticky;
 }
 
+.btn-float-right{
+	float: right;
+}
 
 </style>
 
-<body>
 
+<body>
+  <audio id="myAudio">
+    <source src="pro/pro2.ogg" type="audio/ogg">
+    <source src="pro/pro2.mp3" type="audio/mpeg">
+  </audio>
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
@@ -31,13 +38,19 @@ position: sticky;
   </a>
   
 </div>
-
+<header>
 <!-- Page Content -->
 <div class="w3-teal">
   <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+
+  <button  type="button"><a onclick="playAudio()" ><img src="play.png" alt="play" style="width:40px;height:38px;"></a>
+  </button>
+  <button type="button"><a onclick="pauseAudio()"  ><img src="S.jfif" alt="paus" style="width:40px;height:38px;"></a></button> 
+  
   <div class="w3-container">
     <h1>PROVERBS 1</h1>
   </div>
+</header>
 </div>
 
 
@@ -128,7 +141,7 @@ position: sticky;
     And the complacency of fools will destroy them;</p>
     <p><a href="https://biblehub.com/proverbs/1-33.htm">33</a>But whoever listens to me will dwell safely,
     And will be secure, without fear of evil.”</p>
-
+</div>
 <script>
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -138,7 +151,21 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+
+  var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
 </script>
-     
+
+
+ 
 </body>
 </html> 
