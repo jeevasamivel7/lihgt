@@ -9,8 +9,6 @@ body {
 }
 
 
-
-
 .header {
   padding: 6px 1px;
   background: rgb(5, 215, 252);
@@ -18,9 +16,10 @@ body {
 }
 .btn {
     margin-top: 1%;
-    margin-right: 25px;
+    margin-left: 20px;
     background-color: transparent;
-    float: right;
+    float: left;
+    
     
 }
 
@@ -135,7 +134,17 @@ body {
       background-color: #777;
     }
     </style>
-
+<script>
+    var fontSize = 1;
+function zoomIn() {
+	fontSize += 0.1;
+	document.body.style.fontSize = fontSize + "em";
+}
+function zoomOut() {
+	fontSize -= 0.1;
+	document.body.style.fontSize = fontSize + "em";
+}
+</script>
 
 
 </head>
@@ -166,6 +175,8 @@ body {
         <a class="btn" onclick="pauseAudio()"><img src="stop.png" alt="pause" style="width:30px;height:25px;"></a>
         <a class="btn" onclick="playAudio()"><img src="ply.png" alt="play" style="width:30px;height:25px;"></a>
         <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:30px;height:25px;"></a>
+        <input type="button" value="+" onClick="zoomIn()"/>
+<input type="button" value="-" onClick="zoomOut()"/>
       </div>
 
 </div>
