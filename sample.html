@@ -113,6 +113,29 @@ body {
        text-align: center;
     }
     </style>
+
+<style>
+    div.scrollmenu {
+      background-color:rgb(5, 215, 252);
+      overflow: auto;
+      white-space: nowrap;
+    }
+    
+    div.scrollmenu a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      text-decoration: none;
+    }
+    
+    div.scrollmenu a:hover {
+      background-color: #777;
+    }
+    </style>
+
+
+
 </head>
 <body>
     
@@ -133,15 +156,19 @@ body {
         <a href="#">Contact</a>
       </div>
 <div class="header" id="myHeader">
-    <div id="main">
-        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;REAL LIFE LEADERSHIP TRAINING</span>
-    </div>
-    
-    <a class="btn" onclick="pauseAudio()"><img src="stop.png" alt="pause" style="width:40px;height:38px;"></a>
-  <a class="btn" onclick="playAudio()"><img src="ply.png" alt="play" style="width:40px;height:38px;"></a>
-  <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:40px;height:38px;"></a>
 
-  <h2>Proverbs 1</h2>
+    <div class="scrollmenu">
+        <div id="main">
+            <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;REAL LIFE LEADERSHIP TRAINING</span>
+        </div>
+        <a class="btn" onclick="pauseAudio()"><img src="stop.png" alt="pause" style="width:30px;height:25px;"></a>
+        <a class="btn" onclick="playAudio()"><img src="ply.png" alt="play" style="width:30px;height:25px;"></a>
+        <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:30px;height:25px;"></a>
+        <a class="btn" onclick="pauseAudio()"><img src="stop.png" alt="pause" style="width:30px;height:25px;"></a>
+        <a class="btn" onclick="playAudio()"><img src="ply.png" alt="play" style="width:30px;height:25px;"></a>
+        <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:30px;height:25px;"></a>
+      </div>
+
 </div>
 
 <div class="content">
