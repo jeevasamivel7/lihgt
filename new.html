@@ -5,12 +5,58 @@
 <link rel="stylesheet" href="model.css">
 <script src="aud.js"></script>
 <style>
-  .player {
-    width: 20px;
-    height: 12px;
-    background: url('ps.svg') no-repeat center center;
- }
-</style>
+  .dropbtn {
+    background-image: url('dec.png');
+    color: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn1 {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+  }
+  
+  .dropbtn1:hover, .dropbtn1:focus {
+    background-color: transparent;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  </style>
+
 </header>
 
 
@@ -20,15 +66,9 @@
 
 <body>
 
-  <audio id="myAudio">
-      <source src="pro/12 20Pro001.ogg" type="audio/ogg">
-      <source src="pro/12 20Pro001.mp3" type="audio/mpeg">
-    </audio>
-
-
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Bread</a>
+    
       <a href="#">Tools</a>
       <a href="#">Keys</a>
       <a href="#">Resources</a>
@@ -38,19 +78,29 @@
   <div class="scrollmenu">
       <div id="main">
           <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;REAL LIFE LEADERSHIP TRAINING</span>
-      </div>
-      <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:30px;height:25px;"></a>
-      <a class="btn" onclick="togglePlay()" src="next.png" alt="pause" style="width:30px;height:25px;"></a>
-      <a class="btn" href="mat 2.html"><img src="next.png" alt="next" style="width:30px;height:25px;"></a>
-      <a class="btn" onclick="zoomOut()()"><img src="dec.png" alt="pause" style="width:30px;height:25px;"></a>
-      <a class="btn" onclick="zoomIn()"><img src="inc.png" alt="pause" style="width:30px;height:25px;"></a>
-  
-          <audio>
-            <source src="pro/12 20Pro001.ogg" type="audio/ogg">
-            <source src="pro/12 20Pro001.mp3" type="audio/mpeg">
-          </audio>
-    </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn" img src="inc.png" alt="pause" style="width:30px;height:25px;"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="btn" onclick="zoomOut()()"><img src="dec.png" alt="pause" style="width:25px;height:20px;"></a>
+              <a class="btn" onclick="zoomIn()"><img src="inc.png" alt="pause" style="width:30px;height:25px;"></a>
+            </div>
 
+        
+          </div>
+
+          <div class="dropdown">
+            <a class="btn"  onclick="aud_play_pause()"><img src="spk.png" alt="pause" style="width:25px;height:20px;"></a>
+            <div id="myDropdown" class="dropdown-content">
+              <a class="btn" onclick="zoomOut()()"><img src="dec.png" alt="pause" style="width:25px;height:20px;"></a>
+              <a class="btn" onclick="zoomIn()"><img src="inc.png" alt="pause" style="width:30px;height:25px;"></a>
+            </div>
+
+        
+          </div>
+        </div>
+    
+    </div>
+  
 </div>
 
 <div class="content">
@@ -140,6 +190,9 @@
   And the complacency of fools will destroy them;</p>
   <p><a href="https://biblehub.com/proverbs/1-33.htm">33</a>But whoever listens to me will dwell safely,
   And will be secure, without fear of evil.”</p>
+  <br>
+  <br>
+
 </div>
 
 <script>
@@ -158,7 +211,27 @@ if (window.pageYOffset > sticky) {
 
 
 </script>
-
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
 
 
 <script>
@@ -172,37 +245,35 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 
-function togglePlay() {
-  var audio = document.getElementsByTagName("audio")[0];
-   
-  if (audio) {
-    if (audio.paused) {
-        audio.play();
-       document.getElementById("btn").src = "next.png";
-    } else {
-        audio.pause();
-        document.getElementById("btn").src ="next.png";
-    }
+
+
+function aud_play_pause() {
+  var myAudio = document.getElementById("myTune");
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
   }
 }
-
-
-
+</script>
 
 </script>
 
 <footer>
+
   <div class="footer">
-  <a href="#"><span class="dot"></span></a>
-  <a href="#"><span class="dot"></span></a>
-  <a href="#"><span class="dot"></span></a>
-  <a href="#"><span class="dot"></span></a>
-  <a href="#"><span class="dot"></span></a>
-  <a href="#"><span class="dot"></span></a>
-</div>
+    <audio controls class="myAudio" style="height: 0.3cm;width: 100%;">
+      <source src="pro/12 20Pro001.mp3" type="audio/mpeg">
+      <source src="pro/12 20Pro001.ogg" type="audio/ogg">
+        </audio>
+        <br>
+    <a class="btn" href="mat 2.html"><img src="prv.png" alt="next" style="width:30px;height:25px;"></a>
+    <audio id="myTune" src="pro/12 20Pro001.mp3"></audio>
+    <a class="btn2" onclick="aud_play_pause()"><img src="ply.png" alt="next" style="width:30px;height:25px;"></a>
+    <a class="btn1" href="mat 2.html"><img src="next.png" alt="next" style="width:30px;height:25px;"></a>
+  </div>
+
 </footer>
-
-
 
 </body>
  

@@ -1,0 +1,92 @@
+<!Doctype html>
+<html>
+<style>
+
+.relative {
+ padding: 3px;
+ position: relative;
+ background-color: #fff;
+ margin: 10px;
+} 
+.navitem {
+  display: inline-block;
+  width: 20px; 
+  height: 30px; 
+  text-align: center;
+  border: gray;
+  background-color: #E8562A;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+.btn-group.button.audio
+{
+   width: 0.4cm;
+}
+
+
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  height: 0.5cm;
+}
+.btn-group button1 {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 10%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+<body>
+
+<h1>Vertical Button Group</h1>
+
+<div class="btn-group">
+  <button><audio id="myTune" src="pro2.mp3"></audio>
+    <a class="btn2" onclick="aud_play_pause()"><img src="../ply.png" alt="next" style="width:30px;height:25px;"></a>
+  </button>
+</div>
+<div class="relative">
+        
+            <button1 class="navitem">Item 1</button1>
+            <button1 class="navitem">Item 2</button1>
+            <button1 class="navitem">Item 3</button1>
+      
+    </div>
+    
+   <footer>
+   <div class="btn-group">
+  <button>    <audio controls class="audio">
+   <source src="pro2.mp3" type="audio/mpeg">
+   <source src="pro2.ogg" type="audio/ogg">
+     </audio>
+  </button>
+</div>
+<div class="relative">
+        
+            <button1 class="navitem">Item 1</button1>
+            <button1 class="navitem">Item 2</button1>
+            <button1 class="navitem">Item 3</button1>
+      
+    </div>
+   </footer>
+</body>
+</html>

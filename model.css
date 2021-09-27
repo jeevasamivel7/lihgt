@@ -9,15 +9,29 @@ body {
     background: rgb(5, 215, 252);
     color: #f1f1f1;
   }
-  .btn {
-      margin-top: 1%;
+  .footer.btn {
+    margin-top: 4px;
       margin-left: 20px;
       background-color: transparent;
       float: left;
       
       
   }
+  .btn1 {
+    margin-top: 4px;
+    margin-right: 10px;
+    background-color: transparent;
+    float: right;
+}
   
+.btn2 {
+  margin-top: 1%;
+  margin-left: 44%;
+  background-color: transparent;
+  float: none;
+  
+  
+}
   .header.btn1 {
       margin-top: 10%;
       margin-right: 3%;
@@ -95,13 +109,14 @@ body {
          position: fixed;
          left: 0;
          bottom: 0;
-         height: 0.5cm;
+         height:1.3cm;
          width: 100%;
          background-color: white;
-         color: white;
-         text-align: center;
       }
-    
+  
+   
+
+
       div.scrollmenu {
         background-color:rgb(5, 215, 252);
         overflow: auto;
