@@ -1,17 +1,62 @@
-<DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-.audio{
-width: 60%;
-}
-</style>
+<title>PROVERBS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../source/model.css">
+<script src="../../source/aud.js"></script>
 
-</head>
+
+
+
+<div class="w3-container">
+  
+
 <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Bread</a>
+      <a href="#">Tools</a>
+      <a href="#">Keys</a>
+      <a href="#">Resources</a>
+    </div>
+    <div class="header" id="myHeader">
 
+      <div class="scrollmenu">
+      
+        <button class="openbtn1" onclick="openNav1()"><img src="../../source/right.png" alt="pause" style="width:20px;height:25px;"></button> 
+      <a class="btn1" href="../../Model1/JOB/job1.html"><img src="../../source/nxt.png" alt="next" style="width:23px;height:23px;"></a>
+    <a class="btn" onclick="aud_play_pause()"><img src="../../source/play.png" alt="pause" style="width: 25px;height:25px;"></a>
+    <a class="btn3" href="../PRO/pro1.html"><img src="../../source/pre.png" alt="next" style="width:23px;height:23px;"></a>
+      
+        <div id="main">   
+        
+        <div id="mySidepanel1" class="sidepanel1">
+          <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a>
+          <a class="btn" onclick="zoomOut()()"><img src="../../source/small.png" alt="pause" style="width:25px;height:25px;"></a>
+          <a class="btn" onclick="zoomIn()"><img src="../../source/big.png" alt="pause" style="width:25px;height:25px;"></a>
 
+  
+        </div>
+        <div> <a style="font-size:12px;cursor:pointer;" onclick="openNav()">&#9776;  REAL LIFE LEADERSHIP TRAINING</a>
+
+      
+        </div>
+      </div>
+  
+      </div>
+    
+  </div>
+
+</header>
+<body>
+<div class="content">
+  <div class="scrollmenu1">
+      
+    <a class="btn4" href="#"><img src="../../source/pen.png" alt="next" style="width:23px;height:23px;"></a>
+
+    <a class="btn5" href="#"><img src="../../source/cal.png" alt="next" style="width:23px;height:23px;"></a>
+  </div>
 <h2>Psalms 40  </h2>
 
 <h4> Faith Persevering in Trial  </h4>
@@ -37,16 +82,45 @@ width: 60%;
 <p> <a href="https://biblehub.com/psalms/40-17.htm">17</a>But I am poor and needy;Yet the Lord thinks upon me.You are my help and my deliverer;Do not delay, O my God.</p>
 
 
+<br>
+<br>
+<br>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+if (window.pageYOffset > sticky) {
+header.classList.add("sticky");
+} else {
+header.classList.remove("sticky");
+}
+}
+
+
+</script>
+
+
+
+
+
 <footer>
-   
-  <audio controls class="audio">
-    <source src="../../../Audios/psa/Psa040.mp3" type="audio/mpeg">
-    <source src="../../../Audios/psa/Psa040.ogg" type="audio/ogg">
-      </audio>    
- <br>    
- <a href="../../pro1/pro9.html"><img src="../../prev.gif" alt="PREVIOUS" style="width:44px;height:42px;"></a>
-  <a href="../../../Model1/JHN/jhn18.html"><img src="../../next.gif" alt="NEXT" style="width:44px;height:42px;"></a>
- 
+<div class="footer">
+<div class="audiocenter"><audio controls id="myTune" style="height: 1.2cm;width: 80%;" style="color: #ffe066;">
+  <source src="../../Audio/psa/Psa040.mp3" type="audio/mpeg">
+  <source src="../../Audio/psa/Psa040.ogg" type="audio/ogg">
+    </audio></div>
+</div>
+
 </footer>
+
+
+
+
+
 </body>
-</html>
+</html> 
