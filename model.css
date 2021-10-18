@@ -4,8 +4,13 @@ body {
     font-size: larger;
   }
   
+body p{
 
-  
+    font-size: x-large;
+font: bold;
+}
+
+
   .header {
     padding: 6px 1px;
     
@@ -44,8 +49,10 @@ body {
   
   .content {
     padding: 16px;
+    
   }
-  
+
+
   .sticky {
     position: fixed;
     top: 0;
@@ -147,5 +154,4 @@ body {
         padding: 8px;
         text-decoration: none;
         font-size: x-large;
-      
       }
