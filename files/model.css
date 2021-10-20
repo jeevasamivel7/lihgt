@@ -150,7 +150,8 @@ background-color: transparent;
       overflow: auto;
       white-space: nowrap;
       display: block;
-      font-family: Calibri;  
+      font-family: Calibri;
+      border-style: hidden;  
     }
     
 
@@ -229,7 +230,9 @@ background-color: transparent;
       overflow: auto;
       white-space: nowrap;
       display: block;
-      font-family: Calibri;  
+      font-family: Calibri;
+
+      border-color: rgb(255, 60, 0);  
     }
     
 
